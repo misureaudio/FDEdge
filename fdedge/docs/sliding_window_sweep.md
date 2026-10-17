@@ -9,7 +9,10 @@ the v1.0.0 library. Reference implementation: `examples/sweep_demo.m`
 
 Companion to `docs/real_signal_usage.md` (single known-edge window);
 this document covers the **unknown-edge** case: finding where the
-edges are in a long file.
+edges are in a long file. Stress test on a strong stationary
+27-tone multitone (the stepSNR gate's verified false-positive mode
+and the spectral-novelty fix direction):
+`docs/stationary_multitone_gate.md`.
 
 ## 1. Design in one paragraph
 
