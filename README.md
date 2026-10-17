@@ -27,6 +27,11 @@ same sizes) — replay-critical.
 **Real-signal usage** (e.g. audio windows):
 [docs/real_signal_usage.md](docs/real_signal_usage.md) — mapping,
 verified recipe, the DC-baseline requirement, 50-draw performance.
+**Sliding-window sweep** (finding edges in a long wav/flac file):
+[docs/sliding_window_sweep.md](docs/sliding_window_sweep.md) —
+two-stage design (step-height scan + per-candidate v1 pipeline),
+verified 8/8 on 60 s of audio, ~35× realtime; reference
+implementation [examples/sweep_demo.m](examples/sweep_demo.m).
 
 ---
 
@@ -192,7 +197,7 @@ fdedge/
 ├── tests/             % run_tests.m, gate_replay.m, gate_files.m,
 │                      % golden_manifest.txt, test_*.m (77 tests)
 ├── golden/            % byte-snapshots of the 4 PoC result files
-├── examples/          % replay_{poc,beta,riesz,hybrid}.m, demo.m
-├── docs/              % real_signal_usage.md (real-signal usage, audio case)
+├── examples/          % replay_{poc,beta,riesz,hybrid}.m, demo.m, sweep_demo.m
+├── docs/              % real_signal_usage.md, sliding_window_sweep.md
 └── README.md
 ```
