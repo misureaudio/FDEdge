@@ -1,0 +1,5 @@
+# file                     len     sum
+golden/results_poc.txt       1475  104092
+golden/results_beta.txt      1479   83365
+golden/results_riesz.txt     4167  210800
+golden/results_hybrid.txt    4271  219752

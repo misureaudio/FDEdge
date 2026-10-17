@@ -1,0 +1,30 @@
+=== FD edge-detector PoC, rng(0), A=1.0, beta=0.70 ===
+
+--- Part A (noise sigma = 0.010, smoothing 8 grid pts) ---
+exact plateau  D^beta[A t^beta] = A*Gamma(1.7) = 0.908639
+measured plateau mean (alpha = beta) = 0.902848
+endpoint ratio R(0.95)/R(0.05)   log-log slope (est. beta-alpha):
+  alpha = 0.40 : ratio = 2.1419   loglog-slope = +0.311
+  alpha = 0.45 : ratio = 1.8920   loglog-slope = +0.260
+  alpha = 0.50 : ratio = 1.6710   loglog-slope = +0.209
+  alpha = 0.55 : ratio = 1.4755   loglog-slope = +0.158
+  alpha = 0.60 : ratio = 1.3027   loglog-slope = +0.107
+  alpha = 0.65 : ratio = 1.1498   loglog-slope = +0.056
+  alpha = 0.70 : ratio = 1.0147   loglog-slope = +0.005
+  alpha = 0.75 : ratio = 0.8952   loglog-slope = -0.046
+  alpha = 0.80 : ratio = 0.7897   loglog-slope = -0.097
+  alpha = 0.85 : ratio = 0.6964   loglog-slope = -0.148
+  alpha = 0.90 : ratio = 0.6139   loglog-slope = -0.199
+  alpha = 0.95 : ratio = 0.5410   loglog-slope = -0.250
+best-matching order (min |ratio-1|): alpha = 0.70  (true beta = 0.70)
+edge-exponent estimate at alpha=beta: beta_hat = beta - c1 = 0.695
+
+--- Part B (noise sigma = 0.020, v = 0.01/frame, 60 frames) ---
+estimator bias (noise-free calibration)  delta = 1.37e-04
+raw (debiased)  RMSE = 1.888e-03   (max |err| = 5.225e-03)
+Kalman-filtered RMSE = 1.130e-03   (max |err| = 2.982e-03)
+Kalman improvement factor = 1.67x
+Kalman final velocity estimate = 0.01003 (true 0.01000)
+
+DONE
+=== end ===
